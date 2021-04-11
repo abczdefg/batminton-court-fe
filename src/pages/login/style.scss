@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  .logo {
+    width: 50vw;
+    height: 50vw;
+    margin: 15vw auto 5vw;
+  }
+  .loginBtn {
+    margin-top: 5vw;
+  }
+}
