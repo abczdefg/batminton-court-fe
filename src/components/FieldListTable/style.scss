@@ -1,0 +1,59 @@
+.container {
+  width: 100vw;
+  height: 100%;
+}
+.table {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+.tableHeader {
+  position: sticky;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.tableBody {
+  display: flex;
+  flex-direction: row;
+}
+.tableRow {
+  display: flex;
+  flex-direction: column;
+}
+.tableHeaderRow {
+  .firstCell {
+    z-index: 2;
+  }
+}
+.tableCell {
+  color: $grey;
+  width: 20vw;
+  height: 20vw;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  &.disabled {
+    background: $red;
+  }
+  &.avaliable {
+    background: $green;
+  }
+  &.firstCell {
+  }
+  // .firstCell:not(.tableHeaderCell) {
+  //   position: sticky;
+  //   top: 0;
+  //   left: 0;
+  // }
+  &.tableHeaderCell {
+  }
+}

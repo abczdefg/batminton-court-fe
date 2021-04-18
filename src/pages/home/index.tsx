@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { TabBar, NavBar } from 'antd-mobile';
 import commonStyles from '@/styles/common.scss';
+import CourtIndex from '../court/index';
 import SportUserList from '../sportUserList/index';
 import MePage from '../mePage/index';
 
@@ -14,6 +15,16 @@ const Home = () => {
         主页
       </NavBar>
       <TabBar hidden={false}>
+        <TabBar.Item
+          icon={{ uri: 'https://zos.alipayobjects.com/rmsportal/asJMfBrNqpMMlVpeInPQ.svg' }}
+          selectedIcon={{ uri: 'https://zos.alipayobjects.com/rmsportal/gjpzzcrPMkhfEqgbYvmN.svg' }}
+          title="场地"
+          key="court"
+          selected={tabActive === 'court'}
+          onPress={() => setTab('court')}
+        >
+          <CourtIndex />
+        </TabBar.Item>
         <TabBar.Item
           icon={{ uri: 'https://zos.alipayobjects.com/rmsportal/asJMfBrNqpMMlVpeInPQ.svg' }}
           selectedIcon={{ uri: 'https://zos.alipayobjects.com/rmsportal/gjpzzcrPMkhfEqgbYvmN.svg' }}

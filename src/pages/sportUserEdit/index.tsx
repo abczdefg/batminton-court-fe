@@ -114,24 +114,22 @@ const SportUserEdit = (props: Props) => {
       <List
         renderHeader={renderHeader}
       >
-        <Controller
-          name="nickname"
-          control={control}
-          rules={{ required: 'Nickname is required.' }}
-          render={({
-            field,
-            fieldState: { error },
-          }) => (
-            <InputItem
-              {...field}
-              error={!!error}
-              clear
-              disabled={isEditing}
-            >
-              Nickname
-            </InputItem>
-          )}
-        />
+        { isEditing && (
+          <Controller
+            name="nickname"
+            control={control}
+            render={({
+              field,
+            }) => (
+              <InputItem
+                {...field}
+                disabled
+              >
+                Nickname
+              </InputItem>
+            )}
+          />
+        ) }
         <Controller
           name="username"
           control={control}

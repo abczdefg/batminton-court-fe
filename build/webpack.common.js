@@ -43,7 +43,9 @@ module.exports = {
             loader: 'css-loader',
             options: {
               sourceMap: !isPrd,
-              modules: true
+              modules: isPrd ? true : {
+                localIdentName: '[path][name]__[local]',
+              }
             }
           },
           {

@@ -42,3 +42,5 @@ function createTransform(transformKey: (val: string) => string) {
 export const deepCamel = createTransform(camelCase);
 
 export const deepSnake = createTransform(snakeCase);
+
+export const mergeCssModuleList = (classNameList: any[]) => classNameList.filter(v => !!v).join(' ');

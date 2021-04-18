@@ -7,7 +7,6 @@ export interface SportUserInfo {
 }
 
 export interface AddSportUserParams {
-  nickname: string;
   username: string;
   password: string;
 }

@@ -9,9 +9,11 @@ import { store } from '@/core/store';
 import { history } from '@/core/router';
 
 // 代码分割惰性加载
+// TODO: 路由权限
 const Home = React.lazy(() => import('./pages/home'));
 const Login = React.lazy(() => import('./pages/login'));
 const SportUserEdit = React.lazy(() => import('./pages/sportUserEdit'));
+const FieldList = React.lazy(() => import('./pages/court/FieldList'));
 
 const App = () => {
   return (
@@ -25,6 +27,7 @@ const App = () => {
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/sportUser/:id" component={SportUserEdit} />
+          <Route path="/fieldList" component={FieldList} />
           <Route path="/login" component={Login} />
         </Switch>
       </Router>
